@@ -1,14 +1,13 @@
 
 # from matplotlib.pyplot import text
 # import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
+
 import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
 import time
 
-fig = plt.figure()
 st.title("Streamlit 超入門")
 
 st.write("プログレスバーの表示")
