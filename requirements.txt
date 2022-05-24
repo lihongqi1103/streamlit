@@ -1,9 +1,1 @@
-numpy
-scipy
-pandas
-scikit-learn
-streamlit
-graphviz
 matplotlib
-plotly
-seaborn
