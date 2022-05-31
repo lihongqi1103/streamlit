@@ -56,3 +56,19 @@ if start=="YES":
     if st.button("識別開始"):
         data_test=[[data_0,data_1,data_2,data_3],]
         st.write(clf.predict(data_test))
+    data, label = iris.data, iris.target
+
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    for d, l in zip(data, label):
+        if l == 1:
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "red")
+
+        elif l == 0:
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "blue")
+
+        else:
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "green")
+        
+    st.pyplot(fig)
