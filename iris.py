@@ -41,10 +41,10 @@ if st.button("学習開始"):
     st.write("損失関数")
     st.line_chart(clf.loss_curve_)
 
-    data_0 = st.number_input("ガクの長さ入力")
-    data_1 = st.number_input("ガクの幅入力")
-    data_2 = st.number_input("花弁の長さ入力")
-    data_3 = st.number_input("花弁の幅入力")
+    data_0 = st.slider("ガクの長さ入力",0.0,10.0,0.0,0.01)
+    data_1 = st.slider("ガクの幅入力",0.0,10.0,0.0,0.01)
+    data_2 = st.slider("花弁の長さ入力",0.0,10.0,0.0,0.01)
+    data_3 = st.slider("花弁の幅入力",0.0,10.0,0.0,0.01)
     if st.button("識別開始"):
         data_test=[[data_0,data_1,data_2,data_3],]
         st.write(clf.predict(data_test))
