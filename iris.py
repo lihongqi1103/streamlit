@@ -44,7 +44,7 @@ if start=="YES":
         return clf
 
     clf = return_model(text_1, activation_clf, solver_clf, text_2)
-    st.balloons()
+    
     st.write("学習済み")
     st.write("損失関数")
     st.line_chart(clf.loss_curve_)
