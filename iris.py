@@ -48,7 +48,7 @@ if start=="YES":
     st.write("学習済み")
     st.write("損失関数")
     st.line_chart(clf.loss_curve_)
-
+    
     data_0 = st.slider("ガクの長さ入力",0.0,10.0,0.0,0.01)
     data_1 = st.slider("ガクの幅入力",0.0,10.0,0.0,0.01)
     data_2 = st.slider("花弁の長さ入力",0.0,10.0,0.0,0.01)
@@ -76,9 +76,9 @@ if start=="YES":
             c["x"].append(d[0] * d[1])
             c["y"].append(d[2] * d[3])
             
-    ax.scatter(a["x"], a["y"], color = "red", label = "0")
-    ax.scatter(b["x"], b["y"], color = "blue", label = "1")
-    ax.scatter(c["x"], c["y"], color = "green", label = "2")
+    ax.scatter(a["x"], a["y"], color = "red", label = "0　Setosa")
+    ax.scatter(b["x"], b["y"], color = "blue", label = "1　Versicolor")
+    ax.scatter(c["x"], c["y"], color = "green", label = "2　Versinica")
     ax.scatter(data_0 *data_1, data_2*data_3 , color = "black", label = "mine")
     ax.legend()
     st.pyplot(fig)
