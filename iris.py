@@ -29,8 +29,10 @@ activation_clf = st.radio(
 solver_clf = st.radio(
      "solver",
      ('lbfgs','sgd','adam'))
-text_1 = st.number_input("中間層入力")
-text_2 = st.number_input("繰り返し回数入力")
+#text_1 = st.number_input("中間層入力")
+text_1=st.slider("中間層入力",0,100,50,step=int)
+text_2=st.slider("繰り返し回数入力",0,100,50,step=int)
+#text_2 = st.number_input("繰り返し回数入力")
 if st.button('開始'):
     clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
                     solver= solver_clf ,max_iter=text_2)
