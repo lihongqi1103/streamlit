@@ -23,17 +23,17 @@ data_train, data_test, target_train, target_test = train_test_split(
     iris.data, iris.target, test_size=0.2, random_state=0)
 
 activation_clf = st.radio(
-     "activation",
+     "activation 活性化関数",
      ('identity','logistic','tanh','relu'))
 solver_clf = st.radio(
-     "solver",
+     "solver 最適化手法",
      ('sgd','adam'))
-#text_1 = st.number_input("中間層入力")
+
 text_1=st.slider("中間層入力",0,100,10,1)
 text_2=st.slider("繰り返し回数入力",0,1000,100,1)
-#text_2 = st.number_input("繰り返し回数入力")
+
 start = st.radio(
-     "start",
+     "学習開始",
      ('YES','NO'))
 if start=="YES":
     @st.cache
