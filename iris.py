@@ -56,6 +56,7 @@ def test_check(a = False):
     if not a: return False
     else: return True
 a = test_check()
+st.write(a)
 if a or test_check():
     
     a = test_check()
