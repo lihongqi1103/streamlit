@@ -51,9 +51,15 @@ if st.button("学習開始"):
         data_test=[[data_0,data_1,data_2,data_3],]
         st.write(clf.predict(data_test))
 """
-clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
-                solver= solver_clf ,max_iter=text_2)
-clf.fit(data_train,target_train)
+
+@st.cache
+def return_model(text_1, activation_clf, solver_clf, text_2):
+    clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
+                    solver= solver_clf , max_iter=text_2)
+    clf.fit(data_train,target_train)
+    return clf
+
+clf = return_model(text_1, activation_clf, solver_clf, text_2)
 st.balloons()
 st.write("学習済み")
 st.write("損失関数")
