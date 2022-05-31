@@ -53,7 +53,8 @@ if st.button("学習開始"):
 """
 @st.cache
 def test_check():
-    return st.button("学習開始")
+    a = st.button("学習開始")
+    return a
 if test_check():
     @st.cache
     def return_model(text_1, activation_clf, solver_clf, text_2):
