@@ -32,8 +32,8 @@ solver_clf = st.radio(
 text_1 = st.number_input("中間層入力")
 text_2 = st.number_input("繰り返し回数入力")
 if st.button('開始'):
-    clf = MLPClassifier(hidden_layer_sizes=text_1,activation="activation_clf",
-                    solver="solver_clf",max_iter=text_2)
+    clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
+                    solver= solver_clf ,max_iter=text_2)
     clf.fit(data_train,target_train)
     st.balloons()
     st.write("学習済み")
