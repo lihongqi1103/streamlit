@@ -57,7 +57,7 @@ def test_check(a = False):
     else: return True
 a = test_check()
 st.write(a)
-if a or test_check():
+if a or st.button("学習開始"):
     
     a = test_check()
     
