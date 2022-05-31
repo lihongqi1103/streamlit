@@ -51,7 +51,10 @@ if st.button("学習開始"):
         data_test=[[data_0,data_1,data_2,data_3],]
         st.write(clf.predict(data_test))
 """
-if st.button("学習開始"):
+@st.cache
+def test_check():
+    return st.button("学習開始")
+if test_check():
     @st.cache
     def return_model(text_1, activation_clf, solver_clf, text_2):
         clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
