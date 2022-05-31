@@ -37,10 +37,11 @@ if st.button('開始'):
     clf.fit(data_train,target_train)
     st.balloons()
     st.write("学習済み")
-
+    """
     fig = plt.figure()
     ax = fig.add_subplot()
     ax.plot(clf.loss_curve_)
     ax.legend()
+    """
 
 
