@@ -70,5 +70,5 @@ if start=="YES":
 
         else:
             ax.scatter(d[0] *d[1], d[2]*d[3] , color = "green")
-        
+    ax.scatter(data_0 *data_1, data_2*data_3 , color = "black")
     st.pyplot(fig)
