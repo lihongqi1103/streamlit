@@ -60,16 +60,25 @@ if start=="YES":
 
     fig = plt.figure()
     ax = fig.add_subplot()
-
+    a = {"x" : [], "y" : []}
+    b = {"x" : [], "y" : []}
+    c = {"x" : [], "y" : []}
     for d, l in zip(data, label):
-        if l == 1:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "red", label = "1")
+        if l == 0:
+            a["x"].append(d[0] * d[1])
+            a["y"].append(d[2] * d[3])
 
-        elif l == 0:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "blue", label = "0")
+        elif l == 1:
+            b["x"].append(d[0] * d[1])
+            b["y"].append(d[2] * d[3])
 
         else:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "green", label = "2")
+            c["x"].append(d[0] * d[1])
+            c["y"].append(d[2] * d[3])
+            
+    ax.scatter(a["x"], a["y"], color = "red", label = "0")
+    ax.scatter(b["x"], b["y"], color = "blue", label = "1")
+    ax.scatter(c["x"], c["y"], color = "green", label = "2")
     ax.scatter(data_0 *data_1, data_2*data_3 , color = "black", label = "mine")
     ax.legend()
     st.pyplot(fig)
