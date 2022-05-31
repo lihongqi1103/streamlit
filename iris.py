@@ -59,7 +59,7 @@ a = test_check()
 st.write(a)
 if a or st.button("学習開始"):
     
-    a = test_check()
+    a = test_check(True)
     
     @st.cache
     def return_model(text_1, activation_clf, solver_clf, text_2):
