@@ -1,4 +1,3 @@
-
 # from matplotlib.pyplot import text
 import matplotlib.pyplot as plt
 import sklearn
@@ -33,14 +32,19 @@ solver_clf = st.radio(
 text_1=st.slider("中間層入力",0,100,10,1)
 text_2=st.slider("繰り返し回数入力",0,1000,100,1)
 #text_2 = st.number_input("繰り返し回数入力")
-if st.button('開始'):
+if st.button("学習開始"):
     clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
                     solver= solver_clf ,max_iter=text_2)
     clf.fit(data_train,target_train)
     st.balloons()
     st.write("学習済み")
+    st.write("損失関数")
     st.line_chart(clf.loss_curve_)
 
-    
-
-
+    data_0 = st.number_input("ガクの長さ入力")
+    data_1 = st.number_input("ガクの幅入力")
+    data_2 = st.number_input("花弁の長さ入力")
+    data_3 = st.number_input("花弁の幅入力")
+    if st.button("識別開始"):
+        data_test=[[data_0,data_1,data_2,data_3],]
+        st.write(clf.predict(data_test))
