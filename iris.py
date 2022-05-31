@@ -63,12 +63,13 @@ if start=="YES":
 
     for d, l in zip(data, label):
         if l == 1:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "red")
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "red", label = "1")
 
         elif l == 0:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "blue")
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "blue", label = "0")
 
         else:
-            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "green")
-    ax.scatter(data_0 *data_1, data_2*data_3 , color = "black")
+            ax.scatter(d[0] *d[1], d[2]*d[3] , color = "green", label = "2")
+    ax.scatter(data_0 *data_1, data_2*data_3 , color = "black", label = "mine")
+    ax.legend()
     st.pyplot(fig)
