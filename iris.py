@@ -28,7 +28,7 @@ activation_clf = st.radio(
      ('identity','logistic','tanh','relu'))
 solver_clf = st.radio(
      "solver",
-     ('lbfgs','sgd','adam'))
+     ('sgd','adam'))
 #text_1 = st.number_input("中間層入力")
 text_1=st.slider("中間層入力",0,100,10,1)
 text_2=st.slider("繰り返し回数入力",0,1000,100,1)
@@ -40,12 +40,7 @@ if st.button('開始'):
     st.balloons()
     st.write("学習済み")
     st.line_chart(clf.loss_curve_)
-    """
-    fig = plt.figure()
-    ax = fig.add_subplot()
-    ax.plot(clf.loss_curve_)
-    ax.legend()
-    """
+
     
 
 
