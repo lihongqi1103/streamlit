@@ -11,7 +11,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
 st.title("Streamlit 学習")
-st.header("アヤメのデータ学習")
+st.subheader("アヤメのデータ学習")
 image_00 = Image.open('iris01.png')
 st.image(image_00, caption='アヤメのデータ分類')
 
@@ -25,6 +25,8 @@ data_train, data_test, target_train, target_test = train_test_split(
 activation_clf = st.radio(
      "activation 活性化関数",
      ('identity','logistic','tanh','relu'))
+if activation_clf=='identity':
+    st.latex('''f(x)=x''')
 solver_clf = st.radio(
      "solver 最適化手法",
      ('sgd','adam'))
