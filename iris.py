@@ -29,6 +29,13 @@ if activation_clf=='identity':
     st.latex('''f(x)=x''')
 elif activation_clf=='logistic':
     st.latex('''f(x)=\cfrac{1}{1+e^{-x}}''')
+elif activation_clf=='tanh':
+    st.latex('''f(x)=\cfrac{e^{x}-e^{-x}}{e^{x}+e^{-x}}''')
+elif activation_clf=='relu':
+    st.latex('''f(x)=\begin{cases}
+                     x (x \ge 0) \\
+                     0 (x < 0)
+                     \end{cases}''')
 solver_clf = st.radio(
      "solver 最適化手法",
      ('sgd','adam'))
