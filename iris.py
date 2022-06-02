@@ -12,10 +12,8 @@ from sklearn.model_selection import train_test_split
 
 st.title("Streamlit 学習")
 st.header("アヤメのデータ学習")
-
-image = Image.open('iris.png')
-
-st.image(image, caption='iris画像分類')
+image_00 = Image.open('iris01.png')
+st.image(image_00, caption='アヤメのデータ分類')
 
 iris = datasets.load_iris()
 
