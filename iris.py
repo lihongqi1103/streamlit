@@ -64,6 +64,8 @@ if start=="YES":
     st.write("損失関数")
     st.line_chart(clf.loss_curve_)
     
+    st.subheader("仮想アヤメデータ入力")
+    
     data_0 = st.slider("ガクの長さ入力",0.0,10.0,0.0,0.01)
     data_1 = st.slider("ガクの幅入力",0.0,10.0,0.0,0.01)
     data_2 = st.slider("花弁の長さ入力",0.0,10.0,0.0,0.01)
