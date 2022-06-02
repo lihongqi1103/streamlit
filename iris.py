@@ -56,6 +56,7 @@ if start=="YES":
         clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
                         solver= solver_clf , max_iter=text_2)
         clf.fit(data_train,target_train)
+        st.balloons()
         return clf
 
     clf = return_model(text_1, activation_clf, solver_clf, text_2)
