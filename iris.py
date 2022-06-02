@@ -10,7 +10,7 @@ from sklearn import datasets
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
-st.title("Streamlit 学習")
+st.title("Streamlit ニューラルネットワーク")
 st.subheader("アヤメのデータ学習")
 image_00 = Image.open('iris01.png')
 st.image(image_00, caption='アヤメのデータ分類')
