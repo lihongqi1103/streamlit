@@ -34,8 +34,8 @@ elif activation_clf=='tanh':
 elif activation_clf=='relu':
 
     st.latex(r'''f(x) = \begin{cases}
-1 & (x \geq 0)\\
-0 & (x &lt; 0)
+x & (x \geq 0)\\
+0 & (x < 0)
 \end{cases}
 
 ''')
