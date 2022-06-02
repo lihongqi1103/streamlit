@@ -27,6 +27,8 @@ activation_clf = st.radio(
      ('identity','logistic','tanh','relu'))
 if activation_clf=='identity':
     st.latex('''f(x)=x''')
+elif activation_clf=='logistic':
+    st.latex('''f(x)=1/1+e**-x''')
 solver_clf = st.radio(
      "solver 最適化手法",
      ('sgd','adam'))
