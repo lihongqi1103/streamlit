@@ -10,9 +10,8 @@ from sklearn import datasets
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
 
+st.title("Streamlit 学習")
 st.header("アヤメのデータ学習")
-
-st.write("学習")
 
 
 iris = datasets.load_iris()
