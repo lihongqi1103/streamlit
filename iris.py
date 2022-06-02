@@ -33,10 +33,13 @@ elif activation_clf=='tanh':
     st.latex('''f(x)=\cfrac{e^{x}-e^{-x}}{e^{x}+e^{-x}}''')
 elif activation_clf=='relu':
 
-    st.latex('''x = \begin{cases}
-                a &\text{if } b \\
-                c &\text{if } d
-                \end{cases}''')
+    st.latex('''f(x) = \left\{
+\begin{array}{ll}
+1 & (x \geq 0)\\
+0 & (x &lt; 0)
+\end{array}
+\right.
+''')
 
 solver_clf = st.radio(
      "solver 最適化手法",
