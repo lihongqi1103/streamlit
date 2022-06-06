@@ -9,6 +9,7 @@ from PIL import Image
 from sklearn import datasets
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
+@st.cache(suppress_st_warning=True)
 
 st.title("Streamlit ニューラルネットワーク")
 st.subheader("アヤメのデータ学習")
