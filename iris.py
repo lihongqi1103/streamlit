@@ -9,7 +9,7 @@ from PIL import Image
 from sklearn import datasets
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
-@st.cache(suppress_st_warning=True)
+
 
 st.title("Streamlit ニューラルネットワーク")
 st.subheader("アヤメのデータ学習")
@@ -57,6 +57,7 @@ if start=="YES":
         clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
                         solver= solver_clf , max_iter=text_2)
         clf.fit(data_train,target_train)
+        @st.cache(suppress_st_warning=True)
         st.balloons()
         return clf
 
