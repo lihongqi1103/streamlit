@@ -49,7 +49,7 @@ text_2=st.slider("繰り返し回数入力",0,1000,100,1)
 
 start = st.radio(
      "学習開始",
-     ('YES','NO'))
+     ('NO','YES'))
 if start=="YES":
     @st.cache
     def return_model(text_1, activation_clf, solver_clf, text_2):
