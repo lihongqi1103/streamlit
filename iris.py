@@ -58,7 +58,6 @@ if start=="YES":
                         solver= solver_clf , max_iter=text_2)
         clf.fit(data_train,target_train)
         st.balloons()
-        @st.cache(suppress_st_warning=True)
         return clf
 
     clf = return_model(text_1, activation_clf, solver_clf, text_2)
