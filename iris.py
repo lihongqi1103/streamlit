@@ -52,7 +52,7 @@ start = st.radio(
      "学習開始",
      ('NO','YES'))
 if start=="YES":
-    @st.cache
+    
     def return_model(text_1, activation_clf, solver_clf, text_2):
         clf = MLPClassifier(hidden_layer_sizes=text_1,activation= activation_clf,
                         solver= solver_clf , max_iter=text_2)
